@@ -8,15 +8,18 @@ include_once __DIR__ . '/classes/details.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Prodotti</title>
 </head>
 <body>
     <header>
-        <h1>Shop</h1>
+        <img src="./images/hanger.png" alt="">
+        <h1>Shop online</h1>
     </header>
 
     <main>
         <section>
+            <img src="./images/pullover.jpg" alt="">
             <?php 
                 $size = new Size('Maglione a coste', 'Maglieria', 20, 'M');
             ?>
@@ -47,6 +50,7 @@ include_once __DIR__ . '/classes/details.php';
         </section>
 
         <section>
+            <img src="./images/jeans.jpg" alt="">
             <?php 
                 $size = new Size('Jeans vita alta', 'Pantaloni', 25, 'S');
             ?>
@@ -62,7 +66,7 @@ include_once __DIR__ . '/classes/details.php';
             </div>
             <div>
                Prezzo: <?php echo $size->price ?> Euro
-                <div>
+                <div class='discount'>
                     Sconto del 30% sui pantaloni!
                 </div>
                <?php echo $size->setDiscount('Pantaloni'); ?> Euro
