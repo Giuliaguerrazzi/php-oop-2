@@ -1,6 +1,6 @@
 <?php 
 include_once __DIR__ . '/classes/size.php';
-
+include_once __DIR__ . '/classes/details.php';
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,18 @@ include_once __DIR__ . '/classes/size.php';
             <div>
                Prezzo: <?php echo $size->price; ?> Euro
             </div>
+
+            <?php 
+                $details = new Details('Lana', 'rosso', '0003458');
+            ?>
+
+            <div>
+                Tessuto: <?php echo $details->material; ?>
+            </div>
+
+            <div>
+                Colore: <?php echo $details->color; ?>
+            </div>
         </section>
 
         <section>
@@ -54,6 +66,18 @@ include_once __DIR__ . '/classes/size.php';
                     Sconto del 30% sui pantaloni!
                 </div>
                <?php echo $size->setDiscount('Pantaloni'); ?> Euro
+            </div>
+            
+            <?php 
+                $details = new Details('jeans', 'blu', '0002254');
+            ?>
+
+            <div>
+                Tessuto: <?php echo $details->material; ?>
+            </div>
+
+            <div>
+                Colore: <?php echo $details->color; ?>
             </div>
         </section>
     </main>
